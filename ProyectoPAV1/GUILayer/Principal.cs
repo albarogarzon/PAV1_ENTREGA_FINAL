@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoPAV1.GUILayer;
 using ProyectoPAV1.GUILayer.Usuarios;
+using ProyectoPAV1.GUILayer.Perfiles;
 using ProyectoPAV1.GUILayer.Marcas;
 using ProyectoPAV1.Estadisticas;
 
@@ -65,6 +66,18 @@ namespace ProyectoPAV1.GUILayer
         {
             frmProductosMasVendidos fpmv = new frmProductosMasVendidos();
             fpmv.ShowDialog();
+        }
+
+        private void totalFacturadoPorProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTotalFacturadoXProducto ftp = new frmTotalFacturadoXProducto();
+            ftp.ShowDialog();
+        }
+
+        private void perfilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPerfiles fp = new frmPerfiles();
+            fp.ShowDialog();
         }
     }
 }

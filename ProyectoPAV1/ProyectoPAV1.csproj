@@ -96,6 +96,12 @@
     <Compile Include="Estadisticas\frmTotalFacturado.Designer.cs">
       <DependentUpon>frmTotalFacturado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estadisticas\frmTotalFacturadoXProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\frmTotalFacturadoXProducto.Designer.cs">
+      <DependentUpon>frmTotalFacturadoXProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estadisticas\PMasVendidosDS.cs">
       <DependentUpon>PMasVendidosDS.xsd</DependentUpon>
     </Compile>
@@ -111,6 +117,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>totalFacturadoDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\totalFacturadoXProductoDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>totalFacturadoXProductoDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\frmFactura.cs">
       <SubType>Form</SubType>
@@ -135,6 +146,18 @@
     </Compile>
     <Compile Include="GUILayer\Marcas\frmMarcas.Designer.cs">
       <DependentUpon>frmMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Perfiles\frmABMPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Perfiles\frmABMPerfil.Designer.cs">
+      <DependentUpon>frmABMPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Perfiles\frmPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Perfiles\frmPerfiles.Designer.cs">
+      <DependentUpon>frmPerfiles.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\Productos\frmABMProducto.cs">
       <SubType>Form</SubType>
@@ -202,8 +225,12 @@
     <EmbeddedResource Include="Estadisticas\frmTotalFacturado.resx">
       <DependentUpon>frmTotalFacturado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\frmTotalFacturadoXProducto.resx">
+      <DependentUpon>frmTotalFacturadoXProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Estadisticas\Report1.rdlc" />
     <EmbeddedResource Include="Estadisticas\ReporteTotalFacturado.rdlc" />
+    <EmbeddedResource Include="Estadisticas\ReporteTotalFacturadoXProducto.rdlc" />
     <EmbeddedResource Include="GUILayer\frmFactura.resx">
       <DependentUpon>frmFactura.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +242,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Marcas\frmMarcas.resx">
       <DependentUpon>frmMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Perfiles\frmABMPerfil.resx">
+      <DependentUpon>frmABMPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Perfiles\frmPerfiles.resx">
+      <DependentUpon>frmPerfiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Productos\frmABMProducto.resx">
       <DependentUpon>frmABMProducto.cs</DependentUpon>
@@ -271,6 +304,19 @@
     <None Include="Estadisticas\totalFacturadoDS.xss">
       <DependentUpon>totalFacturadoDS.xsd</DependentUpon>
     </None>
+    <None Include="Estadisticas\totalFacturadoXProductoDS.xsc">
+      <DependentUpon>totalFacturadoXProductoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Estadisticas\totalFacturadoXProductoDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>totalFacturadoXProductoDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Estadisticas\totalFacturadoXProductoDS.xss">
+      <DependentUpon>totalFacturadoXProductoDS.xsd</DependentUpon>
+    </None>
+    <None Include="GUILayer\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\.signature.p7s" />
+    <None Include="GUILayer\ProyectoPAV1.v12.suo" />
     <None Include="packages.config" />
     <None Include="PAVGarzonPassadoreDataSet.xsc">
       <DependentUpon>PAVGarzonPassadoreDataSet.xsd</DependentUpon>
@@ -319,6 +365,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GUILayer\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\de\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="GUILayer\scriptProyectoPav1.sql" />
     <Content Include="Resources\agregar.png" />
     <Content Include="Resources\cancelar3.png" />
     <Content Include="Resources\editar.png" />

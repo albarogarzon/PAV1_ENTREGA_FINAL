@@ -35,11 +35,13 @@
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.estadisticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.totalFacturadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosMasVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.totalFacturadoPorProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.perfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +78,8 @@
             this.soporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem,
             this.marcasToolStripMenuItem,
-            this.productosToolStripMenuItem});
+            this.productosToolStripMenuItem,
+            this.perfilesToolStripMenuItem});
             this.soporteToolStripMenuItem.Name = "soporteToolStripMenuItem";
             this.soporteToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.soporteToolStripMenuItem.Text = "Soporte";
@@ -84,23 +87,54 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // marcasToolStripMenuItem
             // 
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.marcasToolStripMenuItem.Text = "Marcas";
             this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
+            // 
+            // estadisticasToolStripMenuItem
+            // 
+            this.estadisticasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.totalFacturadoToolStripMenuItem,
+            this.productosMasVendidosToolStripMenuItem,
+            this.totalFacturadoPorProductosToolStripMenuItem});
+            this.estadisticasToolStripMenuItem.Name = "estadisticasToolStripMenuItem";
+            this.estadisticasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.estadisticasToolStripMenuItem.Text = "Estadisticas";
+            // 
+            // totalFacturadoToolStripMenuItem
+            // 
+            this.totalFacturadoToolStripMenuItem.Name = "totalFacturadoToolStripMenuItem";
+            this.totalFacturadoToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.totalFacturadoToolStripMenuItem.Text = "Total Facturado";
+            this.totalFacturadoToolStripMenuItem.Click += new System.EventHandler(this.totalFacturadoToolStripMenuItem_Click);
+            // 
+            // productosMasVendidosToolStripMenuItem
+            // 
+            this.productosMasVendidosToolStripMenuItem.Name = "productosMasVendidosToolStripMenuItem";
+            this.productosMasVendidosToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.productosMasVendidosToolStripMenuItem.Text = "Productos mas vendidos";
+            this.productosMasVendidosToolStripMenuItem.Click += new System.EventHandler(this.productosMasVendidosToolStripMenuItem_Click);
+            // 
+            // totalFacturadoPorProductosToolStripMenuItem
+            // 
+            this.totalFacturadoPorProductosToolStripMenuItem.Name = "totalFacturadoPorProductosToolStripMenuItem";
+            this.totalFacturadoPorProductosToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.totalFacturadoPorProductosToolStripMenuItem.Text = "Total Facturado Por Productos";
+            this.totalFacturadoPorProductosToolStripMenuItem.Click += new System.EventHandler(this.totalFacturadoPorProductosToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -120,28 +154,12 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // estadisticasToolStripMenuItem
+            // perfilesToolStripMenuItem
             // 
-            this.estadisticasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.totalFacturadoToolStripMenuItem,
-            this.productosMasVendidosToolStripMenuItem});
-            this.estadisticasToolStripMenuItem.Name = "estadisticasToolStripMenuItem";
-            this.estadisticasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.estadisticasToolStripMenuItem.Text = "Estadisticas";
-            // 
-            // totalFacturadoToolStripMenuItem
-            // 
-            this.totalFacturadoToolStripMenuItem.Name = "totalFacturadoToolStripMenuItem";
-            this.totalFacturadoToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.totalFacturadoToolStripMenuItem.Text = "Total Facturado";
-            this.totalFacturadoToolStripMenuItem.Click += new System.EventHandler(this.totalFacturadoToolStripMenuItem_Click);
-            // 
-            // productosMasVendidosToolStripMenuItem
-            // 
-            this.productosMasVendidosToolStripMenuItem.Name = "productosMasVendidosToolStripMenuItem";
-            this.productosMasVendidosToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.productosMasVendidosToolStripMenuItem.Text = "Productos mas vendidos";
-            this.productosMasVendidosToolStripMenuItem.Click += new System.EventHandler(this.productosMasVendidosToolStripMenuItem_Click);
+            this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.perfilesToolStripMenuItem.Text = "Perfiles";
+            this.perfilesToolStripMenuItem.Click += new System.EventHandler(this.perfilesToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -179,6 +197,8 @@
         private System.Windows.Forms.ToolStripMenuItem estadisticasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem totalFacturadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosMasVendidosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem totalFacturadoPorProductosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perfilesToolStripMenuItem;
     }
 }
 

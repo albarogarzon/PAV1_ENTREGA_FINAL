@@ -37,5 +37,86 @@ namespace ProyectoPAV1.DataAccessLayer
 
             return oPerfil;
         }
+        public IList<Perfil> GetByFilters(String condiciones)
+        {
+
+            List<Perfil> lst = new List<Perfil>();
+            String strSql = string.Concat(" SELECT id_Perfil, ",
+                                              "        nombre ",
+                                              "   FROM Perfiles",
+                                              "  WHERE borrado =0 ");
+
+
+
+            strSql += condiciones;
+
+
+            // if (parametros.ContainsKey("usuario"))
+            //    strSql += " AND (u.usuario LIKE '%' + @usuario + '%') ";
+
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+
+
+            foreach (DataRow row in resultado.Rows)
+                lst.Add(ObjectMapping(row));
+
+            return lst;
+        }
+
+
+        public Perfil GetPerfil(string Nombre)
+        {
+
+            String strSql = string.Concat(" SELECT id_perfil, ",
+                                          "        nombre ",
+                                          "  FROM Perfiles WHERE borrado =0 ");
+
+            strSql += " AND nombre=" + "'" + Nombre + "'";
+
+            //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+
+            // Validamos que el resultado tenga al menos una fila.
+            if (resultado.Rows.Count > 0)
+            {
+                return ObjectMapping(resultado.Rows[0]);
+            }
+
+            return null;
+        }
+
+        internal bool Create(Perfil oPerfil)
+        {
+            //modificar
+
+            string str_sql = "INSERT INTO Perfiles (nombre, borrado)" +
+                            " VALUES (" +
+                            "'" + oPerfil.Nombre + "'" +
+                            ",0)";
+
+
+            return (DBHelper.GetDBHelper().EjecutarSQL(str_sql) == 1);
+        }
+
+        internal bool Update(Perfil oPerfil)
+        {
+            //SIN PARAMETROS
+
+            string str_sql = "UPDATE Perfiles " +
+                             "SET nombre=" + "'" + oPerfil.Nombre + "'" +
+                             " WHERE id_perfil=" + oPerfil.IdPerfil;
+
+            return (DBHelper.GetDBHelper().EjecutarSQL(str_sql) == 1);
+        }
+
+        internal bool Delete(Perfil oPerfil)
+        {
+            string str_sql = "UPDATE Perfiles " +
+                             "SET borrado=" + "'" + true + "'" +
+                             " WHERE id_perfil=" + oPerfil.IdPerfil;
+
+
+            return (DBHelper.GetDBHelper().EjecutarSQL(str_sql) == 1);
+        }
     }
 }

@@ -36,5 +36,25 @@ namespace ProyectoPAV1.Estadisticas
             this.ProductosTableAdapter.Fill(this.PMasVendidosDS.Productos, fechadesde, fechahasta);
             this.reportViewer1.RefreshReport();
         }
+
+        private void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpHasta_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
